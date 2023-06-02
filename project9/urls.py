@@ -17,8 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 import mumbai,csk
+from mumbai.views import *
+from csk.views import *
+from india.views import*
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mumbai/',include('mumbai.urls')),
     path('csk/',include('csk.urls')),
+    path('sachin/',sachin,name='sachin'),
+    path('first/',first,name='first'),
+    path('second/',second,name='second'),
+    path('third/',third,name='third'),
 ]
